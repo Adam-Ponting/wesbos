@@ -1,21 +1,32 @@
-console.log('it works');
-const name = 'Adam';
-const middle = 'David';
-const last = 'Ponting';
+// console.log('it works');
+// const name = 'Adam';
+// const middle = 'David';
+// const last = 'Ponting';
 
-const song = 'oh  \nyeah\n i\nlike\n   piza';
+// const song = 'oh  \nyeah\n i\nlike\n   piza';
 
-const html = `
-    <div>${name}
-        <h2>hello</h2>
-    </div>
-    `;
+// const html = `
+//     <div>${name}
+//         <h2>hello</h2>
+//     </div>
+//     `;
 
-const hello = `Hello my name is ${name + test()}. Nice to meet you. I am ${40 + 20} years old`;
-console.log(hello);
+// const hello = `Hello my name is ${name + test()}. Nice to meet you. I am ${40 + 20} years old`;
+// console.log(hello);
 
-function test() {
-  return ' Arcgh!';
-}
+// function test() {
+//   return ' Arcgh!';
+// }
 
-document.body.innerHTML = html;
+// document.body.innerHTML = html;
+
+// const name = 'adam';
+// const age = 100;
+// console.log(typeof age);
+// console.log(typeof name);
+
+const smarties = 20;
+const kids = 3;
+const eachKidGets = smarties / kids;
+const dadGets = smarties % kids;
+console.log(Math.floor(eachKidGets), dadGets);
