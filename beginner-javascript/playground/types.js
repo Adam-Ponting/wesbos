@@ -25,8 +25,15 @@
 // console.log(typeof age);
 // console.log(typeof name);
 
-const smarties = 20;
-const kids = 3;
-const eachKidGets = smarties / kids;
-const dadGets = smarties % kids;
-console.log(Math.floor(eachKidGets), dadGets);
+// const smarties = 20;
+// const kids = 3;
+// const eachKidGets = smarties / kids;
+// const dadGets = smarties % kids;
+// console.log(Math.floor(eachKidGets), dadGets);
+
+const person = {
+  first: 'adam',
+  last: 'Ponting',
+  age: 100,
+};
+const test = new Symbol('dsad');
