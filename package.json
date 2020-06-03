@@ -1,0 +1,23 @@
+{
+  "name": "wesbos",
+  "version": "1.0.0",
+  "description": "wesbos tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adam-Ponting/wesbos.git"
+  },
+  "author": "Adam Ponting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adam-Ponting/wesbos/issues"
+  },
+  "homepage": "https://github.com/Adam-Ponting/wesbos#readme",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-plugin-html": "^6.0.2"
+  }
+}
