@@ -6,16 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wesbos/beginner-javascript.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wesbos/beginner-javascript/issues"
-  },
-  "homepage": "https://github.com/wesbos/beginner-javascript#readme",
+  "homepage": "https://github.com/Adam-Ponting/wesbos",
   "devDependencies": {
     "babel-eslint": "^9.0.0",
     "cssnano": "^4.1.10",
