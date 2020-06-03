@@ -16,5 +16,6 @@ module.exports = {
     'no-console': 'off',
     semi: ['error', 'always'],
     quotes: ['error', 'single', { avoidEscape: true }],
+    // 'prefer-const': 2,
   },
 };
