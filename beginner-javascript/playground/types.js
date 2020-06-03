@@ -42,18 +42,27 @@
 // console.log(dog);
 // dog = 'snickers';
 
-let somethingUndefined;
-const somethingNull = null;
-console.log(somethingUndefined, somethingNull);
+// let somethingUndefined;
+// const somethingNull = null;
+// console.log(somethingUndefined, somethingNull);
 
-const cher = {
-  first: 'cher',
-};
+// const cher = {
+//   first: 'cher',
+// };
 
-const teller = {
-  first: 'Raymond',
-  last: 'Teller',
-};
+// const teller = {
+//   first: 'Raymond',
+//   last: 'Teller',
+// };
 
-teller.last = null;
-delete teller.last;
+// teller.last = null;
+// delete teller.last;
+
+const isDrawing = false;
+let age = 18;
+const ofAge = age > 19;
+
+console.log(ofAge);
+
+age = 100;
+const age2 = 100;
