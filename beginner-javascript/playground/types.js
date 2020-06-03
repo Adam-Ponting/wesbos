@@ -31,9 +31,29 @@
 // const dadGets = smarties % kids;
 // console.log(Math.floor(eachKidGets), dadGets);
 
-const person = {
-  first: 'adam',
-  last: 'Ponting',
-  age: 100,
+// const person = {
+//   first: 'adam',
+//   last: 'Ponting',
+//   age: 100,
+// };
+// console.log(person);
+
+// let dog;
+// console.log(dog);
+// dog = 'snickers';
+
+let somethingUndefined;
+const somethingNull = null;
+console.log(somethingUndefined, somethingNull);
+
+const cher = {
+  first: 'cher',
 };
-const test = new Symbol('dsad');
+
+const teller = {
+  first: 'Raymond',
+  last: 'Teller',
+};
+
+teller.last = null;
+delete teller.last;
