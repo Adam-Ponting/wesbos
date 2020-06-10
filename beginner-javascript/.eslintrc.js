@@ -17,5 +17,6 @@ module.exports = {
     semi: ['error', 'always'],
     quotes: ['error', 'single', { avoidEscape: true }],
     'prefer-const': 2,
+    'no-shadow': ['error', { builtinGlobals: false, hoist: 'functions', allow: [] }],
   },
 };
