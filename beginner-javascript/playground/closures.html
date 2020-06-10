@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../base.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+  <body>
+    <script>
+      // function outer() {
+      //   const outerVar = 'I am the outer Var';
+      //   function inner() {
+      //     const innerVar = 'I am the inner var';
+      //     console.log(innerVar);
+      //     console.log(outerVar);
+      //   }
+      //   return inner;
+      // }
+      // const innerFn = outer();
+      // innerFn();
+    </script>
 
-<body>
+    <script>
+      // function createGreeting(greeting = '') {
+      //   const myGreet = greeting.toUpperCase();
+      //   return function(name) {
+      //     return `${myGreet} ${name}`;
+      //   };
+      // }
+      // const sayHello = createGreeting('Hello');
+      // const sayHey = createGreeting('Hey');
+      // console.log(sayHello('Wes'));
+      // console.log(sayHello('Kait'));
+      // console.log(sayHey('Kait'));
+    </script>
 
-</body>
-
+    <script>
+      function createGame(gameName) {
+        let score = 0;
+        return function win() {
+          score++;
+          return `You name ${gameName} score is ${score}`;
+        };
+      }
+      const hockeyGame = createGame('Hockey');
+      const soccerGame = createGame('Soccer');
+      console.log(hockeyGame());
+    </script>
+  </body>
 </html>
