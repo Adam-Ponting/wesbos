@@ -18,5 +18,6 @@ module.exports = {
     quotes: ['error', 'single', { avoidEscape: true }],
     'prefer-const': 2,
     'no-shadow': ['error', { builtinGlobals: false, hoist: 'functions', allow: [] }],
+    'no-use-before-define': ['error', { functions: true, classes: true }],
   },
 };
