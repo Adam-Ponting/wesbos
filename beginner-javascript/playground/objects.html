@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title></title>
+        <link rel="stylesheet" href="../base.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+    <body>
+        <!-- <input type="text" name="first" id="" value="wes" /> -->
+        <script>
+            const age = 100;
+            const person = {
+                name: 'wes',
+                age: age,
+                ['ddd ddd']: true,
+                777: false,
+                clothing: {
+                    shirts: 10,
+                    pants: 2,
+                },
+                sayHello(greeting = 'Hello') {
+                    return `${greeting} ${this.name}`;
+                },
+                sneeze: () => console.log('achoo'),
+            };
+            // console.log(person);
+            // person.height = 180;
+            // console.log(person.age);
+            // const propToCheck = prompt('what to check?');
+            // console.log(propToCheck);
+            // console.log(person['age']);
+            // console.log(person[propToCheck]);
+            // let chain = person?.clothing; // optional chaining https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+            // console.log(chain);
 
-<body>
-  <script>
+            const nameInput = document.querySelector('[name="first"]');
+            const name = nameInput ? nameInput.value : null;
+            // console.log(name);
 
-  </script>
-</body>
-
+            const test = delete person.age;
+            console.log(test);
+        </script>
+    </body>
 </html>
