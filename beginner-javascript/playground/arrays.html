@@ -1,17 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title> </title>
+        <link rel="stylesheet" href="../base.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>
+    <body>
+        <script>
+            const names = ['Wes', 'Kait', 'Snickers'];
+            // console.log(names);
+            // console.log(names.length);
+            // console.log(names[names.length - 1]);
 
-  </title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+            // const names2 = [...names, 'Adam'];
+            // console.log(names2);
+            // names.unshift('john');
+            // console.log(names);
 
-<body>
+            // const bikes = ['bianchi', 'miele', 'panasonic', 'miyata'];
 
-</body>
+            // const newBikes = [...bikes];
+            // newBikes.splice(2, 0, 'adam');
+            // console.log(bikes);
+            // console.log(newBikes);
 
+            // const sliceBikes = [...bikes.slice(0, 2), 'Adam!', ...bikes.slice(2)];
+            // console.log(sliceBikes);
+            // const newBikes2 = [...sliceBikes.slice(0, 3), ...sliceBikes.slice(4)];
+            // console.log(newBikes2);
+
+            // const newBikes3 = [...sliceBikes];
+            // newBikes3.splice(2, 1);
+            // console.log(newBikes3);
+
+            const comments = [
+                { text: 'Cool Beans', id: 123 },
+                { text: 'Love this', id: 133 },
+                { text: 'Neato', id: 233 },
+                { text: 'good bikes', id: 333 },
+                { text: 'so good', id: 433 },
+            ];
+            function deleteComment(id, commentsArr) {
+                const commentIndex = commentsArr.findIndex((comment) => comment.id === id);
+                const newArr = [
+                    ...commentsArr.slice(0, commentIndex),
+                    ...commentsArr.slice(commentIndex + 1),
+                ];
+                return newArr;
+            }
+            console.log(deleteComment(333, comments));
+
+            // const kaitIndex = names.findIndex((name) => name === 'Kait');
+            // // console.log(kaitIndex);
+            // const newNamesWithoutKait = [
+            //     ...names.slice(0, kaitIndex),
+            //     ...names.slice(kaitIndex + 1),
+            // ];
+            // console.log(newNamesWithoutKait);
+
+            // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            // console.log(numbers);
+            // numbers.splice(3, 2);
+            // console.log(numbers);
+
+            // // mutation
+            // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            // // numbers.reverse();
+
+            // // copy the original array , then reverse
+            // const numbersReversed = [...numbers].reverse();
+
+            // // immutable
+            // const pizzaSlice = numbers.slice(2, 4);
+            // console.log(pizzaSlice);
+            // console.log(numbers);
+        </script>
+    </body>
 </html>
