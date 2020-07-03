@@ -165,7 +165,26 @@
                     name: `${person.names.first} ${person.names.last}`,
                 };
             });
+
             console.table(cleanPeople);
+
+            const over40 = cleanPeople.filter((el) => el.age > 20);
+            console.log(over40);
+
+            function getStudentId(id) {
+                return function(student) {
+                    return student.id === id;
+                };
+            }
+            function findByProp(prop, propValue) {
+                return function(student) {
+                    return student[prop] === propValue;
+                };
+            }
+            console.log(students.find(findByProp('id', '2958')));
+
+            const student = students.find(getStudentId('565a'));
+            console.log(student);
         </script>
     </body>
 </html>
