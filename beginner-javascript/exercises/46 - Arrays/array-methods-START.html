@@ -164,57 +164,55 @@
             /* Callback Methods */
 
             // find the first rating that talks about a burger with find()
-            const burger = feedback.find((el) => el.comment.includes('burgs'));
-            console.log(burger);
+            // const burger = feedback.find((el) => el.comment.includes('burgs'));
+            // console.log(burger);
 
-            // find all ratings that are above 2 with filter()
-            const ratings = feedback.filter((el) => el.rating > 2);
-            console.log(ratings);
+            // // find all ratings that are above 2 with filter()
+            // const ratings = feedback.filter((el) => el.rating > 2);
+            // console.log(ratings);
 
-            // find all ratings that talk about a burger with filter()
-            const burgers = feedback.filter((el) => el.comment.toLowerCase().includes('burger'));
-            console.log(burgers);
+            // // find all ratings that talk about a burger with filter()
+            // const burgers = feedback.filter((el) => el.comment.toLowerCase().includes('burger'));
+            // console.log(burgers);
 
-            // Remove the one star rating however you like!
-            const oneStar = feedback.filter((el, i) => {
-                if (el.rating === 1) {
-                    console.log(i);
-                    return true;
-                }
-            });
-            const oneStarIndex = feedback.findIndex((el) => el.rating === 1);
-            console.log(oneStarIndex);
-            console.log(feedback);
-            const newFeedback = [
-                ...feedback.slice(0, oneStarIndex),
-                ...feedback.slice(oneStarIndex + 1),
-            ];
-            console.log(newFeedback);
-
-            // check if there is at least 5 of one type of meat with some()
-            const meatsArray = [];
-            for (const [key, value] of Object.entries(meats)) {
-                console.log(key, value);
-                meatsArray.push(`${key}: ${value}`);
-            }
-            console.log(meatsArray);
-            // make sure we have at least 3 of every meat with every()
-            // sort the toppings alphabetically with sort()
-            const toppingsInOrder = toppings.sort();
-            console.log(toppingsInOrder);
-
-            // sort the order totals from most expensive to least with .sort()
-            const totalsInOrder = orderTotals.sort((a, b) => b - a);
-            console.log(totalsInOrder);
-
-            // Sort the prices with sort()
-            // const pricesInOrder = prices.forEach((element) => {
-            //     console.log(element);
+            // // Remove the one star rating however you like!
+            // const oneStar = feedback.filter((el, i) => {
+            //     if (el.rating === 1) {
+            //         console.log(i);
+            //         return true;
+            //     }
             // });
+            // const oneStarIndex = feedback.findIndex((el) => el.rating === 1);
+            // console.log(oneStarIndex);
+            // console.log(feedback);
+            // const newFeedback = [
+            //     ...feedback.slice(0, oneStarIndex),
+            //     ...feedback.slice(oneStarIndex + 1),
+            // ];
+            // console.log(newFeedback);
 
-            /*
-              Looping Methods (next)
-            */
+            // // check if there is at least 5 of one type of meat with some()
+            // const meatsArray = [];
+            // for (const [key, value] of Object.entries(meats)) {
+            //     console.log(key, value);
+            //     meatsArray.push(`${key}: ${value}`);
+            // }
+            // console.log(meatsArray);
+            // // make sure we have at least 3 of every meat with every()
+            // // sort the toppings alphabetically with sort()
+            // const toppingsInOrder = toppings.sort();
+            // console.log(toppingsInOrder);
+
+            // // sort the order totals from most expensive to least with .sort()
+            // const totalsInOrder = orderTotals.sort((a, b) => b - a);
+            // console.log(totalsInOrder);
+
+            // // Sort the prices with sort()
+            // // const pricesInOrder = prices.forEach((element) => {
+            // //     console.log(element);
+            // // });
+
+            /* Looping Methods (next) */
         </script>
     </body>
 </html>
