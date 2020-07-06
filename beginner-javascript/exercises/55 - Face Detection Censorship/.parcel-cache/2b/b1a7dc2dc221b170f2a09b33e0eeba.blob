@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Censorship</title>
+        <link rel="stylesheet" href="087dd86e1f059db728e95d74f9dd956f">
+    </head>
+
+    <body>
+        <div class="wrap">
+            <video class="webcam"></video>
+            <canvas class="video"></canvas>
+            <canvas class="face"></canvas>
+        </div>
+        <!-- <script src="./pixelated-face.js"></script> -->
+        <script src="8c8e1e095c65bc9fdd962c126545f1e2"></script>
+
+        <style data-parcel-key="9ba70eccb1c39a5fa71e31428f7f6fe5">
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .wrap {
+                position: relative;
+                min-height: 100vh;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wrap > * {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .face {
+                position: absolute;
+            }
+        </style>
+    </body>
+</html>

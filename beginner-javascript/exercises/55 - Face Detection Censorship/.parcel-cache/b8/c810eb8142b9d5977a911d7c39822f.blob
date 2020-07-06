@@ -1,0 +1,5 @@
+const webcam = document.querySelector('.webcam');
+const videoCanvas = document.querySelector('.video');
+const videoCtx = videoCanvas.getContext('2d');
+const faceCanvas = document.querySelector('.face');
+const faceCtx = videoCanvas.getContext('2d');
