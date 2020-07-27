@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Bind Call and Apply!</title>
+        <link rel="stylesheet" href="../base.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Bind Call and Apply!</title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+    <body>
+        <p>Hey</p>
+        <button>Click me</button>
+        <script>
+            const person = {
+                name: 'Adam Ponting',
+                sayHi() {
+                    console.log(this);
+                    console.log(`Hey ${this.name}`);
+                    return `Hey ${this.name}`;
+                },
+            };
+            const jenna = { name: 'Jenna' };
+            const sayHi = person.sayHi.bind(jenna);
 
-<body>
+            const $ = document.querySelector.bind(document);
 
-</body>
+            const bill = {
+                total: 1000,
+                calculate: function(taxRate) {
+                    console.log(taxRate);
+                    return this.total + this.total * taxRate;
+                },
+                describe: function(meal, drink, taxRate) {
+                    console.log(
+                        `Your meal of ${meal} and drink of ${drink} was ${this.calculate(taxRate)}`
+                    );
+                },
+            };
+            // const total = bill.calculate(0.3);
+            const calc = bill.calculate.bind({ total: 500 }, 0.05);
+            console.log(calc());
 
+            const calc2 = bill.calculate.call({ total: 500 }, 0.05);
+            console.log(calc2);
+
+            const calc3 = bill.calculate.apply({ total: 500 }, [0.05]);
+            console.log(calc3);
+
+            const myMeal = bill.describe.call(bill, 'pizza', 'beer', 0.6);
+            console.log(myMeal);
+            const myMeal2 = bill.describe.apply(bill, ['pizza', 'beer', 0.6]);
+            console.log(myMeal2);
+        </script>
+    </body>
 </html>
