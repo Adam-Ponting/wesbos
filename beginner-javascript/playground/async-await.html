@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Async Await</title>
+        <link rel="stylesheet" href="../base.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Async Await</title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+    <body>
+        <script>
+            function wait(ms = 0) {
+                return new Promise((resolve) => {
+                    setTimeout(resolve, ms);
+                });
+            }
 
-<body>
-  <script>
+            function makePizza(toppings = []) {
+                return new Promise(function(resolve, reject) {
+                    if (toppings.includes('pineapple')) {
+                        reject('Seriously?!');
+                    }
+                    const timeToBake = 500 + toppings.length * 200;
+                    setTimeout(() => {
+                        resolve(`Here is your pizza 🍕 with the toppings ${toppings.join(' ')}`);
+                    }, timeToBake);
+                });
+            }
 
-  </script>
-</body>
+            async function makeDinner() {
+                const pizza1 = makePizza(['pepperoni']);
+                const pizza2 = makePizza([
+                    'mushrooms',
+                    'pepperoni',
+                    'egg',
+                    'jam',
+                    'honey',
+                    'mushrooms',
+                    'pepperoni',
+                    'egg',
+                    'jam',
+                    'honey',
+                    'mushrooms',
+                    'pepperoni',
+                    'egg',
+                    'jam',
+                    'honey',
+                ]);
+                const [pep, mush] = await Promise.all([pizza1, pizza2]);
+                console.log(pep);
+                console.log(mush);
+            }
+            makeDinner();
 
+            // async function go() {
+            //     console.log('Starting');
+            //     await wait(2000);
+            //     console.log('Running');
+            //     await wait(200);
+            //     console.log('Ending');
+            // }
+            // go();
+        </script>
+    </body>
 </html>
