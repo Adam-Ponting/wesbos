@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>APIs</title>
+        <link rel="stylesheet" href="../base.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>APIs</title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+    <body>
+        <p class="user"></p>
+        <script>
+            const userEl = document.querySelector('.user');
+            const baseEndPoint = 'https://api.github.com';
+            const usersEndPoint = `${baseEndPoint}/users`;
 
-<body>
-  <script>
+            function handleError(err) {
+                console.log('Error');
+                console.log(err);
+                userEl.textContent = `Something went wrong => ${err}`;
+            }
 
-  </script>
-</body>
+            async function displayUser(userName) {
+                userEl.textContent = 'Loading...';
+                const response = await fetch(`${usersEndPoint}/${userName}`);
+                const data = await response.json();
 
+                console.log(data);
+                userEl.textContent = `${data.name} & ${data.blog}`;
+            }
+            displayUser('Adam-Ponting').catch(handleError);
+        </script>
+    </body>
 </html>
